@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="d935159a-e4ef-4e75-b0a7-d979ccc0742a"
+    Name="dccf9700-49ae-4bcd-9029-6d376cff31c9"
     Publisher="CN=Carleen"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="d935159a-e4ef-4e75-b0a7-d979ccc0742a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="dccf9700-49ae-4bcd-9029-6d376cff31c9" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Photo_Library_App</DisplayName>
+    <DisplayName>PhotoLibraryApp</DisplayName>
     <PublisherDisplayName>Carleen</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="Photo_Library_App.App">
+      EntryPoint="PhotoLibraryApp.App">
       <uap:VisualElements
-        DisplayName="Photo_Library_App"
+        DisplayName="PhotoLibraryApp"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Photo_Library_App"
+        Description="PhotoLibraryApp"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
