@@ -9,18 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView x:Name="Images" ItemsSource="{Binding}" Height=" 300" Width="400" Margin="50">
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="Image">
-                    <StackPanel Orientation="Vertical" Margin="2">
-                        <Image Source="File"/>
-                    </StackPanel>
-                </DataTemplate>
-
-
-            </GridView.ItemTemplate>
-        </GridView>
-        <Button x:Name="Import_Photos_Button" Content="Import Photos" Margin=" 100" Click="Import_Photos_Button_ClickAsync"/>
        
+        <Button x:Name="Import_Photos_Button" Content="Import Photos" Margin=" 100" Click="Import_Photos_Button_ClickAsync"/>
+        <Image Name="image1"  Source="{Binding Image}" HorizontalAlignment="Left" Height="234" Margin="384,416,0,0" VerticalAlignment="Top" Width="337"/>
+
     </Grid>
 </Page>
+
+
