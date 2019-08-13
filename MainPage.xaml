@@ -9,8 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-       
-        <Button x:Name="Import_Photos_Button" Content="Import Photos" Margin=" 100" Click="Import_Photos_Button_ClickAsync"/>
+        <Button 
+                Content="Import Pictures" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Top" 
+                Click= "Import_Photos_Button_ClickAsync"/>
+
         <Image Name="image1"  Source="{Binding Image}" HorizontalAlignment="Left" Height="234" Margin="384,416,0,0" VerticalAlignment="Top" Width="337"/>
 
     </Grid>

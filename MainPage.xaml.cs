@@ -93,9 +93,6 @@ namespace Photo_Library_App
 
            
         }
-
     }
-
- 
 }
         
