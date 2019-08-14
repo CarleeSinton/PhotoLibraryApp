@@ -43,6 +43,17 @@
             Width="337"
             Margin="384, 416, 0, 0">
         </Image>
+        <Image
+            Name="image2"
+            Source="{Binding Image}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Height="234"
+            Width="337"
+            Margin="800, 416, 0, 0">
+        </Image>
+        
+        
         
         <TextBlock 
             x:Name="information" 
