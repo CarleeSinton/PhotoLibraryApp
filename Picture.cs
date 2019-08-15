@@ -72,5 +72,29 @@ namespace PhotoLibraryApp
 
             return pictures;
         }
+        
+        //Added folderpath 
+        public async static Task<ICollection<Picture>> GetAllPicturesAsyncOld()
+        {
+            var pictures = new List<Picture>();
+
+            StorageFolder savedPicturesFolder = KnownFolders.PicturesLibrary;
+            IReadOnlyList<StorageFile> fileList = await savedPicturesFolder.GetFilesAsync();
+
+            foreach (var file in fileList)
+            {
+                BitmapImage bitmapImage = new BitmapImage();
+                var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+                bitmapImage.SetSource(stream);
+
+                var pic = new Picture();
+                pic.Path = file.Path;
+                pic.ImageSource = bitmapImage;
+
+                pictures.Add(pic);
+            }
+
+            return pictures;
+        }
     }
 }
