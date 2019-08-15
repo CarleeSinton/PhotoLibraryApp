@@ -60,5 +60,15 @@
             VerticalAlignment="Bottom" 
             HorizontalAlignment="Center">
         </TextBlock>
+
+        <GridView Name="Employees" ItemsSource="{Binding}" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Picture">
+                    <Image Width="200" Height="200" Source="{x:Bind ImageSource}" />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </Page>

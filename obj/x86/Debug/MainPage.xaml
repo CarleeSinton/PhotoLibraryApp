@@ -43,12 +43,33 @@
             Width="337"
             Margin="384, 416, 0, 0">
         </Image>
+        <Image x:ConnectionId='5'
+            Name="image2"
+            Source="{Binding Image}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Height="234"
+            Width="337"
+            Margin="800, 416, 0, 0">
+        </Image>
         
-        <TextBlock x:ConnectionId='5' 
+        
+        
+        <TextBlock x:ConnectionId='6' 
             x:Name="information" 
             VerticalAlignment="Bottom" 
             HorizontalAlignment="Center">
         </TextBlock>
+
+        <GridView x:ConnectionId='7' Name="Employees" ItemsSource="{Binding}" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <GridView.ItemTemplate>
+                <DataTemplate                           >
+                    <Image x:ConnectionId='9' Width="200" Height="200"                               />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </Page>
 
