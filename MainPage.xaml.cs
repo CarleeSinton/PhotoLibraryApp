@@ -75,5 +75,12 @@ namespace PhotoLibraryApp
         {
             this.Frame.Navigate(typeof(AlbumPage));
         }
+
+        
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            this.DataContext = await Picture.GetAllPicturesAsync();
+        }
     }
 }
