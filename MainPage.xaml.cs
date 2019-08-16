@@ -27,7 +27,13 @@ namespace PhotoLibraryApp
             this.InitializeComponent();
         }
 
-        //This is where I am going to create an ObservableCollection
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            this.DataContext = Picture.Collection;
+
+            await Picture.LoadAllPicturesAsync();
+        }
 
         public async void Add_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)
         {
@@ -40,47 +46,13 @@ namespace PhotoLibraryApp
             picker.FileTypeFilter.Add(".bmp");
 
             var files = await picker.PickMultipleFilesAsync();
-            Image[] images = new Image[2];
-            images[0] = image1;
-            images[1] = image2;
 
-
-            if (files.Count > 0)
-            {
-                
-                int i = 0;
-                foreach (Windows.Storage.StorageFile file in files)
-                {
-                    
-                    using (Windows.Storage.Streams.IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
-                    {
-                        Windows.UI.Xaml.Media.Imaging.BitmapImage bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
-                        bitmapImage.SetSource(fileStream);
-                        images[i].Source = bitmapImage;
-                        //this is where I will add the image to the collection using i as index #
-
-                    }
-                    this.information.Text = "Picked photo: " + file.Name;
-                    i++;
-                }
-            }
-            else
-            {
-                this.information.Text = "Operation cancelled";
-            }
-
+            await Picture.AddPictures(files);
         }
 
         private void Album_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AlbumPage));
-        }
-
-        
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            this.DataContext = await Picture.GetAllPicturesAsync();
-        }
+        }        
     }
 }
