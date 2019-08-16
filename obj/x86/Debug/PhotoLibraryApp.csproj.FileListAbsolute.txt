@@ -61,7 +61,6 @@ C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\Core\PhotoLibraryApp.e
 C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\PhotoLibraryApp.build.appxrecipe
 C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\System.Runtime.dll
 C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
-C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\PhotoLibraryApp.csprojAssemblyReference.cache
 C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\App.g.i.cs
 C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\App.g.cs
 C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\AlbumPage.g.i.cs
@@ -98,3 +97,4 @@ C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\qualifiers.txt.interme
 C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885562160000000.json
+C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\PhotoLibraryApp.csprojAssemblyReference.cache
