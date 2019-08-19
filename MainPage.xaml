@@ -9,19 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
-        <StackPanel Orientation="Vertical" Margin="20,20">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Collection" Background="White" />
-                <Button Content="Albums" Background="White" Click="Album_Button_Click"/>
-                <Button Content="+ Add Photos" Click="Add_Photos_Button_ClickAsync" Margin="400,0" />
-            </StackPanel>
 
+        <StackPanel Orientation="Vertical" Margin="100, 30, 110, 20">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0"/>
+                <Button Content="Albums" Background="White" Click="Album_Button_Click" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
+                <Button Content="+ Add Photos" Click="Add_Photos_Button_ClickAsync" Margin="1000, 20" BorderBrush="Gray" Background="White"/>
+            </StackPanel>
             <GridView Name="CollectionGrid" ItemsSource="{Binding}"
-                ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="local:Picture">
-                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}" />
+                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
