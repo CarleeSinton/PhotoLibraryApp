@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Photo_Library_App
+namespace PhotoLibraryApp
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -32,15 +32,15 @@ namespace Photo_Library_App
             this.Suspending += OnSuspending;
         }
 
-        /// <summary>
+          /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-
+            await Picture.LoadAllPicturesAsync();
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootFrame == null)
