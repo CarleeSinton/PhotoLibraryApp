@@ -27,9 +27,9 @@ namespace PhotoLibraryApp
             this.InitializeComponent();
         }
 
-        private void Create_Album_Click(object sender, RoutedEventArgs e)
+        private void Add_Album_Button_ClickAsync(object sender, RoutedEventArgs e)
         {
-            this.information2.Text = "Create Album functionality has yet to be implemented";
+          
         }
         private void Collection_Button_Click(object sender, RoutedEventArgs e)
         {
