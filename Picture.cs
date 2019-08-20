@@ -7,6 +7,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Popups;
 
 namespace PhotoLibraryApp
 {
@@ -32,11 +33,12 @@ namespace PhotoLibraryApp
         {
             foreach (var storageFile in storageFiles)
             {
-                // Add picture to the global collection
-                await AddPictureToCollection(storageFile.Path);
+                
+                    // Add picture to the global collection
+                    await AddPictureToCollection(storageFile.Path);
 
-                // Save picture file path in storage data file
-                FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, storageFile.Path);
+                   // Save picture file path in storage data file
+                   FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, storageFile.Path);
             }           
         }
 
@@ -68,7 +70,17 @@ namespace PhotoLibraryApp
         private static async Task AddPictureToCollection(string filePath)
         {
             // Create a bitmap
-            var storageFile = await StorageFile.GetFileFromPathAsync(filePath);
+            StorageFile storageFile = null;
+
+            try
+            {
+                 storageFile = await StorageFile.GetFileFromPathAsync(filePath);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                throw new Exception("Access denied to the folder");               
+            }
+
             BitmapImage bitmapImage = new BitmapImage();
             var stream = await storageFile.OpenAsync(Windows.Storage.FileAccessMode.Read);
             bitmapImage.SetSource(stream);
