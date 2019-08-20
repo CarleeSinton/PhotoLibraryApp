@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -47,7 +48,15 @@ namespace PhotoLibraryApp
 
             var files = await picker.PickMultipleFilesAsync();
 
-            await Picture.AddPictures(files);
+            try
+            {
+                await Picture.AddPictures(files);
+            }
+            catch (Exception ex)
+            {
+                var dialog = new MessageDialog(ex.Message);
+                await dialog.ShowAsync();
+            }
         }
 
         private void Album_Button_Click(object sender, RoutedEventArgs e)
