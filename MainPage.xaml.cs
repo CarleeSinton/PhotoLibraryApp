@@ -31,9 +31,7 @@ namespace PhotoLibraryApp
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            this.DataContext = Picture.Collection;
-
-            await Picture.LoadAllPicturesAsync();
+            this.DataContext = DisplayAllPhotos.CollectionAllPhotos;
         }
 
         public async void Add_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)

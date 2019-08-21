@@ -9,31 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2'
-            Content="Create Album"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Top"
-                                      >
-        </Button>
-        <TextBlock x:ConnectionId='3' 
-            x:Name="information2"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Center">
-        </TextBlock>
-        <Button x:ConnectionId='4'
-            Content="Collection"
-            Background="White"
-            HorizontalAlignment="Left"
-            Margin="91,20,0,0"
-            VerticalAlignment="Top"
-                                           >
-        </Button>
-        <TextBox
-            Text="Albums"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Margin="173,20,0,0">
-        </TextBox>
+        <StackPanel Orientation="Vertical" Margin="100, 30, 110, 20">
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='5' Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0"                                />
+                <Button Content="Albums" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
+                <Button x:ConnectionId='6' Content="+ Album"                                     Margin="1000, 20" BorderBrush="Gray" Background="White"/>
+            </StackPanel>
+            <GridView x:ConnectionId='2' Name="CollectionGrid" ItemsSource="{Binding}"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <GridView.ItemTemplate>
+                    <DataTemplate                           >
+                        <Image x:ConnectionId='4' Width="150" Height="150"                              />
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </StackPanel>
     </Grid>
 </Page>
 
