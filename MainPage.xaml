@@ -14,7 +14,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0"/>
                 <Button Content="Albums" Background="White" Click="Album_Button_Click" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
-                <Button Content="+ Add Photos" Click="Add_Photos_Button_ClickAsync" Margin="1000, 20" BorderBrush="Gray" Background="White"/>
+                <Button Content="+ Add Photos" Click="Add_Photos_Button_ClickAsync" Margin="300, 20" BorderBrush="Gray" Background="White"/>
             </StackPanel>
             <GridView Name="CollectionGrid" ItemsSource="{Binding}"
                   ScrollViewer.VerticalScrollBarVisibility="Auto">
