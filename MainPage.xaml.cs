@@ -64,7 +64,7 @@ namespace PhotoLibraryApp
 
         private void Delete_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(DeletePhoto));
         }
     }
 }
