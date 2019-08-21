@@ -53,5 +53,10 @@ namespace PhotoLibraryApp
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void DeletePhotoCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

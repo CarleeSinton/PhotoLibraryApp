@@ -66,5 +66,6 @@ namespace PhotoLibraryApp
         {
             this.Frame.Navigate(typeof(DeletePhoto));
         }
+
     }
 }

@@ -23,7 +23,7 @@
                   ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="local:Picture">
-                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
+                        <Image Width="200" Height="200" Source="{x:Bind ImageSource}" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>

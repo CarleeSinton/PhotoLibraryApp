@@ -18,14 +18,20 @@
                     <Button Content="Cancel" Click="Cancel_Button_ClickAsync" BorderBrush="Gray" Background="White"/>
                 </StackPanel>
             </StackPanel>
-            <GridView Name="CollectionGrid" ItemsSource="{Binding}"
+            <GridView SelectionMode="Multiple"  Name="DeleteGrid" ItemsSource="{Binding}"
                   ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="local:Picture">
-                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
+                    <DataTemplate x:Name="ImageGalleryDataTemplate" x:DataType="local:Picture">
+                        <Image Width="200" Height="200" Source="{x:Bind ImageSource}" Stretch="UniformToFill"/>
                     </DataTemplate>
                 </GridView.ItemTemplate>
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
             </GridView>
         </StackPanel>
     </Grid>
 </Page>
+
