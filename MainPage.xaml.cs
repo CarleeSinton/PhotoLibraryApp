@@ -26,14 +26,12 @@ namespace PhotoLibraryApp
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = Picture.Collection;
         }
 
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            this.DataContext = Picture.Collection;
-
-            await Picture.LoadAllPicturesAsync();
         }
 
         public async void Add_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)

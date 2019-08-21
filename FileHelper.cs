@@ -21,11 +21,6 @@ namespace PhotoLibraryApp
             {
                 file.WriteLine(content);
             }
-
-            //var textStream = await textFile.OpenAsync(FileAccessMode.ReadWrite);
-            //var textWriter = new StreamWriter(textStream);
-            //textWriter..WriteString(content);
-            //await textWriter.StoreAsync();
         }
 
         public async static Task<string> ReadTextFileAsync(string filename)

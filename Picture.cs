@@ -33,12 +33,21 @@ namespace PhotoLibraryApp
         {
             foreach (var storageFile in storageFiles)
             {
-                
+                if (Collection.Any(p => p.Path == storageFile.Path) == false)
+                {
+
+
                     // Add picture to the global collection
                     await AddPictureToCollection(storageFile.Path);
 
-                   // Save picture file path in storage data file
-                   FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, storageFile.Path);
+                    // Save picture file path in storage data file
+                    FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, storageFile.Path);
+                }
+                else
+                {
+                    var dialog = new MessageDialog($"The file '{storageFile.Path}' already exists in the collection.");
+                    await dialog.ShowAsync();
+                }
             }           
         }
 
@@ -52,14 +61,10 @@ namespace PhotoLibraryApp
 
             if (!string.IsNullOrWhiteSpace(content))
             {
-                var fileList = content.Split();
+                var fileList = content.Split("\r\n", StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var file in fileList)
                 {
-                    if (string.IsNullOrEmpty(file))
-                    {
-                        continue;
-                    }
 
                     await AddPictureToCollection(file);
 
