@@ -14,8 +14,8 @@
             <StackPanel Orientation="Horizontal">
                 <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0"/>
                 <Button Content="Albums" Background="White" Click="Album_Button_Click" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
-                <StackPanel Orientation="Vertical"  >
-                    <Button Content="+ Add Photos" Click="Add_Photos_Button_ClickAsync" BorderBrush="Gray" Background="White"/>
+                <StackPanel Orientation="Vertical"  Margin="200,20">
+                    <Button Content="   + Add Photos  " Click="Add_Photos_Button_ClickAsync" BorderBrush="Gray" Background="White"/>
                     <Button Content="- Delete Photos" Click="Delete_Photos_Button_ClickAsync" BorderBrush="Gray" Background="White"/>
                  </StackPanel>
             </StackPanel>

@@ -14,7 +14,10 @@
             <StackPanel Orientation="Horizontal">
                 <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0"/>
                 <Button x:ConnectionId='5' Content="Albums" Background="White"                            BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
-                <Button x:ConnectionId='6' Content="+ Add Photos"                                      Margin="1000, 20" BorderBrush="Gray" Background="White"/>
+                <StackPanel Orientation="Vertical"  Margin="200,20">
+                    <Button x:ConnectionId='6' Content="   + Add Photos  "                                      BorderBrush="Gray" Background="White"/>
+                    <Button x:ConnectionId='7' Content="- Delete Photos"                                         BorderBrush="Gray" Background="White"/>
+                 </StackPanel>
             </StackPanel>
             <GridView x:ConnectionId='2' Name="CollectionGrid" ItemsSource="{Binding}"
                   ScrollViewer.VerticalScrollBarVisibility="Auto">

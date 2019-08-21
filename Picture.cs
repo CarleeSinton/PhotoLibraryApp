@@ -14,7 +14,7 @@ namespace PhotoLibraryApp
     class Picture
     {
         // File to store application's data
-        private const string TEXT_FILE_NAME = "Library.txt";
+        private const string TEXT_FILE_NAME = "Library2.txt";
 
         // Global collection of pictures
         public static ObservableCollection<Picture> Collection = new ObservableCollection<Picture>();
