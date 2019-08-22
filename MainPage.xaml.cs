@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Input;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -67,5 +68,14 @@ namespace PhotoLibraryApp
             this.Frame.Navigate(typeof(DeletePhoto));
         }
 
+        private void SelectPhotosButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SelectPhotos));
+        }
+
+        private void CancelSelectionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

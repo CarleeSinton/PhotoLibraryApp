@@ -21,30 +21,15 @@ namespace PhotoLibraryApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class DeletePhoto : Page
+    public sealed partial class SelectPhotos : Page
     {
-        public string Path { get; set; }
-
-        public IList<object> SelectedItems { get; }
-
-        public DeletePhoto()
+        public SelectPhotos()
         {
             this.InitializeComponent();
-            this.DataContext = Picture.Collection;
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private async void DeleteItemBtn_Click(object sender, RoutedEventArgs e)
         {
-            base.OnNavigatedTo(e);
-        }
-
-        private void Cancel_Button_ClickAsync(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
-
-        private async void Delete_Button_ClickAsync(object sender, RoutedEventArgs e)
-        {   
             //Create message dialog and set contents
             var confirmation = new MessageDialog("Are you sure you want to delete these photos?");
             //Add commands and set their callbacks
@@ -58,11 +43,20 @@ namespace PhotoLibraryApp
 
         private void CommandInvokedHandler(IUICommand command)
         {
+
         }
 
-        private void Album_Button_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AlbumPage));
+        }
+
+        private void CancelSelectionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void SelectGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
         }
 
         private void Collection_Button_Click(object sender, RoutedEventArgs e)
@@ -70,8 +64,9 @@ namespace PhotoLibraryApp
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void DeleteGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Album_Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(AlbumPage));
         }
     }
 }

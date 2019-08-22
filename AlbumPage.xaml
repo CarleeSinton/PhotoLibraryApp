@@ -9,20 +9,32 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="100, 30, 110, 20">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" Click="Collection_Button_Click"/>
-                <Button Content="Albums" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
-                <Button Content="+ Album" Click="Add_Album_Button_ClickAsync" Margin="1000, 20" BorderBrush="Gray" Background="White"/>
+        <Page>
+            <CommandBar DefaultLabelPosition="Right">
+                <AppBarButton x:Name="SelectItmesBtn" FontFamily="OverflowCheckGlyph" Label="Select Albums">
+                    <AppBarButton.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe762;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Name="AddItemBtn" Label="Create Album" Icon="Add" Click="Add_Album_Button_ClickAsync"/>
+                <AppBarButton x:Name="DeleteItemBtn" Label="Delete Album" Icon="Delete"/>
+                <AppBarButton x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel" Click="CancelSelectionBtn_Click"/>
+            </CommandBar>
+        </Page>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Margin="100, 50, 110, 20">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Collection" Background="White" Click="Collection_Button_Click" FontSize="20"/>
+                    <Button Content="Albums" Background="White" BorderBrush="Gray" BorderThickness="0, 0, 0, 1" FontSize="20"/>
+                </StackPanel>
+                <GridView Name="CollectionGrid" ItemsSource="{Binding}" ScrollViewer.VerticalScrollMode="Auto" Margin="30">
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Picture">
+                            <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
             </StackPanel>
-            <GridView Name="CollectionGrid" ItemsSource="{Binding}"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto">
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="local:Picture">
-                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
