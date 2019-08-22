@@ -18,7 +18,7 @@
                     <Button Content="Cancel" Click="Cancel_Button_ClickAsync" BorderBrush="Gray" Background="White"/>
                 </StackPanel>
             </StackPanel>
-            <GridView SelectionMode="Multiple"  Name="DeleteGrid" ItemsSource="{Binding}"
+            <GridView SelectionMode="Multiple" SelectionChanged="DeleteGrid_SelectionChanged" Name="DeleteGrid" ItemsSource="{Binding}"
                   ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <GridView.ItemTemplate>
                     <DataTemplate x:Name="ImageGalleryDataTemplate" x:DataType="local:Picture">

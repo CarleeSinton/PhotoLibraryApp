@@ -98,5 +98,31 @@ namespace PhotoLibraryApp
             // Add Picture object to the global observable collection
             Collection.Add(pic);
         }
+
+        //Delete Photos Method: 
+
+        public static async Task FindPhotoFilePath()
+        {
+
+        }
+        public static async Task DeletePhotoFromCollection(string filePath)
+        {
+            string line = null;
+            string line_to_delete = "filePath";
+
+            using (StreamReader reader = new StreamReader("C:\\input"))
+            {
+                using (StreamWriter writer = new StreamWriter("C:\\output"))
+                {
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (String.Compare(line, line_to_delete) == 0)
+                            continue;
+
+                        writer.WriteLine(line);
+                    }
+                }
+            }
+        }
     }
 }
