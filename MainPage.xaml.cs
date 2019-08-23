@@ -60,6 +60,11 @@ namespace PhotoLibraryApp
         private void Album_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AlbumPage));
-        }        
+        }
+
+        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PhotoViewPage));
+        }
     }
 }

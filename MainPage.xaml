@@ -17,10 +17,10 @@
                 <Button Content="+ Add Photos" Click="Add_Photos_Button_ClickAsync" Margin="300, 20" BorderBrush="Gray" Background="White"/>
             </StackPanel>
             <GridView Name="CollectionGrid" ItemsSource="{Binding}"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" IsItemClickEnabled="True" IsSwipeEnabled="True" ItemClick="ItemView_ItemClick">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="local:Picture">
-                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
+                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}" />
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
