@@ -101,14 +101,11 @@ namespace PhotoLibraryApp
 
         //Delete Photos Method: 
 
-        public static async Task FindPhotoFilePath()
-        {
 
-        }
         public static async Task DeletePhotoFromCollection(string filePath)
         {
             string line = null;
-            string line_to_delete = "filePath";
+            string line_to_delete = filePath;
 
             using (StreamReader reader = new StreamReader("C:\\input"))
             {

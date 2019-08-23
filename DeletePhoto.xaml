@@ -22,19 +22,19 @@
                     <Button Content="Collection" Background="White" Click="Collection_Button_Click" FontSize="20"/>
                     <Button Content="Albums" Background="White" Click="Album_Button_Click" FontSize="20"/>
                 </StackPanel>
-                <GridView SelectionMode="Multiple" Name="DeleteGrid" ItemsSource="{Binding}" Margin="30">
-                    <GridView.ItemTemplate>
-                        <DataTemplate x:Name="ImageGalleryDataTemplate" x:DataType="local:Picture">
-                            <Image Width="200" Height="200" Source="{x:Bind ImageSource}" Stretch="UniformToFill"/>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-                    <GridView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <ItemsWrapGrid Orientation="Horizontal"/>
-                        </ItemsPanelTemplate>
-                    </GridView.ItemsPanel>
-                </GridView>
-            </StackPanel>
+            <GridView SelectionMode="Multiple" Name="DeleteGrid" ItemsSource="{Binding}" Margin="30" SelectionChanged="DeleteGrid_SelectionChanged" SelectedItem="{Binding Path}">
+                <GridView.ItemTemplate>
+                    <DataTemplate x:Name="ImageGalleryDataTemplate" x:DataType="local:Picture">
+                        <Image Width="200" Height="200" Source="{x:Bind ImageSource}" Stretch="UniformToFill"/>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+            </GridView>
+        </StackPanel>
 
     </Grid>
 </Page>

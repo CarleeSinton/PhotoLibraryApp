@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,9 +24,8 @@ namespace PhotoLibraryApp
     /// </summary>
     public sealed partial class DeletePhoto : Page
     {
-        public string Path { get; set; }
+        public string Path { get; }
 
-        public IList<object> SelectedItems { get; }
 
         public DeletePhoto()
         {
@@ -48,16 +48,34 @@ namespace PhotoLibraryApp
             //Create message dialog and set contents
             var confirmation = new MessageDialog("Are you sure you want to delete these photos?");
             //Add commands and set their callbacks
-            confirmation.Commands.Add(new UICommand("Yes, Delete Photos", new UICommandInvokedHandler(this.CommandInvokedHandler)));
-            confirmation.Commands.Add(new UICommand("Cancel", new UICommandInvokedHandler(this.CommandInvokedHandler)));
+            confirmation.Commands.Add(new UICommand("Yes, Delete Photos", new UICommandInvokedHandler(this.CommandInvokedHandlerDelete)));
+            confirmation.Commands.Add(new UICommand("Cancel", new UICommandInvokedHandler(this.CommandInvokedHandlerCancel)));
             //set command that will be invoked by default & cancel
             confirmation.DefaultCommandIndex = 0;
             confirmation.CancelCommandIndex = 1;
             await confirmation.ShowAsync();
+
         }
 
-        private void CommandInvokedHandler(IUICommand command)
+        public void CommandInvokedHandlerDelete(IUICommand command)
         {
+            Debug.WriteLine("It worked");
+            TestPrint();
+           
+            
+            //if (DeleteGrid_SelectionChanged = true)
+            //{
+
+            //}
+            //foreach(ListViewItem item in ListView.mySelectedItems)
+            //{
+            //    Picture.DeletePhotoFromCollection
+            //}
+        }
+
+        public void CommandInvokedHandlerCancel(IUICommand command)
+        {
+            Debug.WriteLine("I hit cancel");
         }
 
         private void Album_Button_Click(object sender, RoutedEventArgs e)
@@ -70,8 +88,15 @@ namespace PhotoLibraryApp
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void DeleteGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void DeleteGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Debug.WriteLine(Path);
+           
+        }
+
+        public void TestPrint()
+        {
+            Debug.WriteLine("I am doing this");
         }
     }
 }
