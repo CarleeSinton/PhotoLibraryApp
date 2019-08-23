@@ -19,24 +19,24 @@
                 </AppBarButton>
                 <AppBarButton x:Name="AddItemBtn" Label="Add Photos" Icon="Add" Click="Add_Photos_Button_ClickAsync"/>
                 <AppBarButton x:Name="DeleteItemBtn" Label="Delete Photos" Icon="Delete" Click="Delete_Photos_Button_ClickAsync"/>
-                <AppBarButton x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel" Click="CancelSelectionBtn_Click"/>
+                <AppBarButton x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel" Click="CancelSelectionBtn_Click_1"/>
             </CommandBar>
         </Page>
-        <ScrollViewer>
+       
             <StackPanel Orientation="Vertical" Margin="100, 50, 110, 20">
                 <StackPanel Orientation="Horizontal">
                     <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="0, 0, 0, 1" FontSize="20"/>
                     <Button Content="Albums" Background="White" Click="Album_Button_Click" FontSize="20"/>
                 </StackPanel>
-                <GridView Name="CollectionGrid" ItemsSource="{Binding}" Margin="30">
+                <GridView Name="CollectionGrid" ItemsSource="{Binding}" Margin="30" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="local:Picture">
-                            <Image Source="{x:Bind ImageSource}" Height="200" Width="200" Stretch="UniformToFill"/>
+                            <Image Source="{x:Bind ImageSource}" Height="150" Width="150"/>
                         </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
             </StackPanel>
-        </ScrollViewer>
+        
 
     </Grid>
 </Page>

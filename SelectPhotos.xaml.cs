@@ -26,6 +26,7 @@ namespace PhotoLibraryApp
         public SelectPhotos()
         {
             this.InitializeComponent();
+            this.DataContext = Picture.Collection;
         }
 
         private async void DeleteItemBtn_Click(object sender, RoutedEventArgs e)

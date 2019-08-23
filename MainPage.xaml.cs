@@ -73,7 +73,8 @@ namespace PhotoLibraryApp
             this.Frame.Navigate(typeof(SelectPhotos));
         }
 
-        private void CancelSelectionBtn_Click(object sender, RoutedEventArgs e)
+
+        private void CancelSelectionBtn_Click_1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }

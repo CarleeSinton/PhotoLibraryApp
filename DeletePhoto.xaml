@@ -16,13 +16,13 @@
             </CommandBar>
         </Page>
 
-        <ScrollViewer>
+ 
             <StackPanel Orientation="Vertical" Margin="100, 50, 110, 20">
                 <StackPanel Orientation="Horizontal">
                     <Button Content="Collection" Background="White" Click="Collection_Button_Click" FontSize="20"/>
                     <Button Content="Albums" Background="White" Click="Album_Button_Click" FontSize="20"/>
                 </StackPanel>
-                <GridView SelectionMode="Multiple" SelectionChanged="DeleteGrid_SelectionChanged" Name="DeleteGrid" ItemsSource="{Binding}" Margin="30">
+                <GridView SelectionMode="Multiple" Name="DeleteGrid" ItemsSource="{Binding}" Margin="30">
                     <GridView.ItemTemplate>
                         <DataTemplate x:Name="ImageGalleryDataTemplate" x:DataType="local:Picture">
                             <Image Width="200" Height="200" Source="{x:Bind ImageSource}" Stretch="UniformToFill"/>
@@ -35,7 +35,7 @@
                     </GridView.ItemsPanel>
                 </GridView>
             </StackPanel>
-        </ScrollViewer>
+
     </Grid>
 </Page>
 
