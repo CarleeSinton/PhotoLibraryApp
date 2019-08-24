@@ -108,9 +108,7 @@ namespace PhotoLibraryApp
 
         public static async Task DeletePhotoFromCollection(string photoPath)
         {
-            FileHelper.DeleteTextLineAsync(TEXT_FILE_NAME, photoPath);
-
-            string currFile = ApplicationData.Current.LocalFolder + TEXT_FILE_NAME;
+            string currFile = ApplicationData.Current.LocalFolder.Path + "\\" + TEXT_FILE_NAME;
             string tempFile =  currFile + ".temp";
             Debug.WriteLine(currFile);
             Debug.WriteLine(tempFile);

@@ -73,7 +73,6 @@ namespace PhotoLibraryApp
         public void CommandInvokedHandlerCancel(IUICommand command)
         {
             Debug.WriteLine(command.Label);
-            FileHelper.DeleteTextLineAsync("Library2.txt");
         }
 
         private void Album_Button_Click(object sender, RoutedEventArgs e)

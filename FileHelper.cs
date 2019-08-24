@@ -45,27 +45,5 @@ namespace PhotoLibraryApp
             return textReader.ReadString((uint)textLength);
         }
 
-        public async static void DeleteTextLineAsync(string libraryName, string photoPath)
-        {
-            var storageFolder = ApplicationData.Current.LocalFolder;
-            string currLibrary = libraryName;
-
-            StorageFile pictureLibrary;
-
-            try
-            {
-                pictureLibrary = await storageFolder.GetFileAsync(libraryName);
-            }
-            catch (FileNotFoundException e)
-            {
-                throw e;
-            }
-
-
-
-
-
-            Debug.WriteLine(textFile);
-        }
     }
 }
