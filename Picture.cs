@@ -15,10 +15,12 @@ namespace PhotoLibraryApp
     class Picture
     {
         // File to store application's data
-        private const string TEXT_FILE_NAME = "Library2.txt";
+        private const string TEXT_FILE_NAME = "PictureLibrary.txt";
 
         // Global collection of pictures
         public static ObservableCollection<Picture> Collection = new ObservableCollection<Picture>();
+
+        public static StorageFile mainStorageFile;
 
         // Path of the picture file
         public string Path { get; set; }
@@ -34,6 +36,7 @@ namespace PhotoLibraryApp
         {
             foreach (var storageFile in storageFiles)
             {
+                mainStorageFile = storageFile;
                 if (Collection.Any(p => p.Path == storageFile.Path) == false)
                 {
 
@@ -105,7 +108,9 @@ namespace PhotoLibraryApp
 
         public static async Task DeletePhotoFromCollection(string photoPath)
         {
-            string currFile = "C:\\Users\\Carleen\\AppData\\Local\\Packages\\dccf9700-49ae-4bcd-9029-6d376cff31c9_ekwfph1e0f7dm\\LocalState\\" + TEXT_FILE_NAME;
+            FileHelper.DeleteTextLineAsync(TEXT_FILE_NAME, photoPath);
+
+            string currFile = ApplicationData.Current.LocalFolder + TEXT_FILE_NAME;
             string tempFile =  currFile + ".temp";
             Debug.WriteLine(currFile);
             Debug.WriteLine(tempFile);

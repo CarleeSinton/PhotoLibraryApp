@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,29 @@ namespace PhotoLibraryApp
             var textLength = textStream.Size;
             await textReader.LoadAsync((uint)textLength);
             return textReader.ReadString((uint)textLength);
+        }
+
+        public async static void DeleteTextLineAsync(string libraryName, string photoPath)
+        {
+            var storageFolder = ApplicationData.Current.LocalFolder;
+            string currLibrary = libraryName;
+
+            StorageFile pictureLibrary;
+
+            try
+            {
+                pictureLibrary = await storageFolder.GetFileAsync(libraryName);
+            }
+            catch (FileNotFoundException e)
+            {
+                throw e;
+            }
+
+
+
+
+
+            Debug.WriteLine(textFile);
         }
     }
 }

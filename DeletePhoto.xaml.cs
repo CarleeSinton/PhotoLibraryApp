@@ -73,6 +73,7 @@ namespace PhotoLibraryApp
         public void CommandInvokedHandlerCancel(IUICommand command)
         {
             Debug.WriteLine(command.Label);
+            FileHelper.DeleteTextLineAsync("Library2.txt");
         }
 
         private void Album_Button_Click(object sender, RoutedEventArgs e)
@@ -87,11 +88,6 @@ namespace PhotoLibraryApp
 
         public void DeleteGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-        }
-
-        public void TestPrint()
-        {
-            Debug.WriteLine("I am doing this");
         }
     }
 }
