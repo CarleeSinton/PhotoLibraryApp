@@ -59,23 +59,20 @@ namespace PhotoLibraryApp
 
         public void CommandInvokedHandlerDelete(IUICommand command)
         {
-            Debug.WriteLine("It worked");
-            TestPrint();
-           
-            
-            //if (DeleteGrid_SelectionChanged = true)
-            //{
+            foreach (Picture p in this.DeleteGrid.SelectedItems)
+            {
+                Debug.WriteLine(p.Path);
+                Picture.DeletePhotoFromCollection(p.Path);
+            }
+            Picture.Collection.Clear();
+            Picture.LoadAllPicturesAsync();
+            this.Frame.Navigate(typeof(MainPage));
 
-            //}
-            //foreach(ListViewItem item in ListView.mySelectedItems)
-            //{
-            //    Picture.DeletePhotoFromCollection
-            //}
         }
 
         public void CommandInvokedHandlerCancel(IUICommand command)
         {
-            Debug.WriteLine("I hit cancel");
+            Debug.WriteLine(command.Label);
         }
 
         private void Album_Button_Click(object sender, RoutedEventArgs e)
@@ -90,8 +87,6 @@ namespace PhotoLibraryApp
 
         public void DeleteGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Debug.WriteLine(Path);
-           
         }
 
         public void TestPrint()

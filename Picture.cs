@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Popups;
+using System.Diagnostics;
 
 namespace PhotoLibraryApp
 {
@@ -102,24 +103,26 @@ namespace PhotoLibraryApp
         //Delete Photos Method: 
 
 
-        public static async Task DeletePhotoFromCollection(string filePath)
+        public static async Task DeletePhotoFromCollection(string photoPath)
         {
-            string line = null;
-            string line_to_delete = filePath;
-
-            using (StreamReader reader = new StreamReader("C:\\input"))
+            string currFile = "C:\\Users\\Carleen\\AppData\\Local\\Packages\\dccf9700-49ae-4bcd-9029-6d376cff31c9_ekwfph1e0f7dm\\LocalState\\" + TEXT_FILE_NAME;
+            string tempFile =  currFile + ".temp";
+            Debug.WriteLine(currFile);
+            Debug.WriteLine(tempFile);
+            using (var sr = new StreamReader(currFile))
+            using (var sw = new StreamWriter(tempFile))
             {
-                using (StreamWriter writer = new StreamWriter("C:\\output"))
-                {
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        if (String.Compare(line, line_to_delete) == 0)
-                            continue;
+                string line;
 
-                        writer.WriteLine(line);
-                    }
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line != photoPath)
+                        sw.WriteLine(line);
                 }
             }
+
+            File.Delete(currFile);
+            File.Move(tempFile, currFile);
         }
     }
 }
