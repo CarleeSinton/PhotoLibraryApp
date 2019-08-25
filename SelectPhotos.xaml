@@ -17,8 +17,8 @@
             </CommandBar>
         </Page>
 
-  
-            <StackPanel Orientation="Vertical" Margin="100, 50, 110, 20">
+        <ScrollViewer VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" Margin="100, 50, 110, 20">
+            <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <Button Content="Collection" Background="White" Click="Collection_Button_Click" FontSize="20"/>
                     <Button Content="Albums" Background="White" Click="Album_Button_Click" FontSize="20"/>
@@ -36,7 +36,6 @@
                     </GridView.ItemsPanel>
                 </GridView>
             </StackPanel>
-
-
+        </ScrollViewer>
     </Grid>
 </Page>

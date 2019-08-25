@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="PhotoLibraryApp.PhotoViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoLibraryApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1387*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <Page Grid.ColumnSpan="2">
+            <CommandBar DefaultLabelPosition="Right">
+                <CommandBar.Content>
+                    <AppBarButton x:Name="Back" Label="Back" Icon="Back" LabelPosition="Collapsed" Click="Back_Button_Click"/>
+                </CommandBar.Content>
+                <AppBarButton x:Name="AddItemBtn" Label="Add to..." Icon="Add" Click="Add_Photos_Button_ClickAsync"/>
+                <AppBarButton x:Name="DeleteItemBtn" Label="Delete Photos" Icon="Delete" Click="Delete_Photos_Button_ClickAsync"/>
+                <AppBarButton x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel" Click="CancelSelectionBtn_Click_1"/>
+            </CommandBar>
+        </Page>
+
+
+        <StackPanel Orientation="Vertical" Margin="100,30,100,30" Grid.ColumnSpan="2" >
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Back" Click="Back_Button_Click"/>
+            </StackPanel>
+            <FlipView x:Name="flipView" ItemsSource="{x:Bind Items}">
+                <FlipView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Picture">
+                        <Image Width="800" Height="450" Source="{x:Bind ImageSource}"/>
+                    </DataTemplate>
+                </FlipView.ItemTemplate>
+            </FlipView>
+        </StackPanel>
+    </Grid>
+</Page>

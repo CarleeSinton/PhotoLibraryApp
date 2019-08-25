@@ -22,13 +22,13 @@
                 <AppBarButton x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel" Click="CancelSelectionBtn_Click_1"/>
             </CommandBar>
         </Page>
-       
-            <StackPanel Orientation="Vertical" Margin="100, 50, 110, 20">
+        <ScrollViewer VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" Margin="100, 50, 110, 20">
+            <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="0, 0, 0, 1" FontSize="20"/>
                     <Button Content="Albums" Background="White" Click="Album_Button_Click" FontSize="20"/>
                 </StackPanel>
-                <GridView Name="CollectionGrid" ItemsSource="{Binding}" Margin="30" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <GridView Name="CollectionGrid" ItemsSource="{Binding}" Margin="30" IsItemClickEnabled="True" IsSwipeEnabled="True" ItemClick="CollectionGrid_ItemClick">
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="local:Picture">
                             <Image Source="{x:Bind ImageSource}" Height="200" Width="200" Stretch="UniformToFill"/>
@@ -36,7 +36,9 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </StackPanel>
+        </ScrollViewer>
         
+
 
     </Grid>
 </Page>

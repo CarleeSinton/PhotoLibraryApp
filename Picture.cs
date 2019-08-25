@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace PhotoLibraryApp
 {
-    class Picture
+    public class Picture
     {
         // File to store application's data
         private const string TEXT_FILE_NAME = "PictureLibrary.txt";
