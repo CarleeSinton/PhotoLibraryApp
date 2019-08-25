@@ -60,7 +60,22 @@ namespace PhotoLibraryApp
         private void Album_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AlbumPage));
-        }        
+        }
+
+        private void Delete_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DeletePhoto));
+        }
+
+        private void SelectPhotosButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SelectPhotos));
+        }
+
+        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PhotoViewPage));
+        }
     }
 }
 
