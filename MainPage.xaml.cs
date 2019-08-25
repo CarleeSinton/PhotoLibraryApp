@@ -60,6 +60,13 @@ namespace PhotoLibraryApp
         private void Album_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AlbumPage));
-        }        
+        }
+
+        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            GridView gv = sender as GridView;
+            int index = gv.Items.IndexOf((e.ClickedItem));
+            this.Frame.Navigate(typeof(PhotoViewPage), index );
+        }
     }
 }
