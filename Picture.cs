@@ -127,5 +127,6 @@ namespace PhotoLibraryApp
             File.Delete(currFile);
             File.Move(tempFile, currFile);
         }
+
     }
 }

@@ -82,6 +82,7 @@ namespace PhotoLibraryApp
         private void CollectionGrid_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(PhotoViewPage));
+
         }
     }
 }
