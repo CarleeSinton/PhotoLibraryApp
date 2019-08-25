@@ -70,8 +70,8 @@ namespace PhotoLibraryApp
 
             FlipView flipView1 = new FlipView
             {
-                Width = 150,
-                Height = 150,
+                Width = 200,
+                Height = 200,
                 BorderThickness = new Thickness(4)
             };
 
