@@ -9,31 +9,33 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2'
-            Content="Create Album"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Top"
-                                      >
-        </Button>
-        <TextBlock x:ConnectionId='3' 
-            x:Name="information2"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Center">
-        </TextBlock>
-        <Button x:ConnectionId='4'
-            Content="Collection"
-            Background="White"
-            HorizontalAlignment="Left"
-            Margin="91,20,0,0"
-            VerticalAlignment="Top"
-                                           >
-        </Button>
-        <TextBox
-            Text="Albums"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Margin="173,20,0,0">
-        </TextBox>
+        <Page>
+            <CommandBar DefaultLabelPosition="Right">
+                <AppBarButton x:ConnectionId='6' x:Name="SelectItmesBtn" FontFamily="OverflowCheckGlyph" Label="Select Albums">
+                    <AppBarButton.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe762;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:ConnectionId='7' x:Name="AddItemBtn" Label="Create Album" Icon="Add"                                    />
+                <AppBarButton x:ConnectionId='8' x:Name="DeleteItemBtn" Label="Delete Album" Icon="Delete"/>
+                <AppBarButton x:ConnectionId='9' x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel"                                 />
+            </CommandBar>
+        </Page>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Margin="100, 50, 110, 20">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:ConnectionId='5' Content="Collection" Background="White"                                 FontSize="20"/>
+                    <Button Content="Albums" Background="White" BorderBrush="Gray" BorderThickness="0, 0, 0, 1" FontSize="20"/>
+                </StackPanel>
+                <GridView x:ConnectionId='2' Name="CollectionGrid" ItemsSource="{Binding}" ScrollViewer.VerticalScrollMode="Auto" Margin="30">
+                    <GridView.ItemTemplate>
+                        <DataTemplate                           >
+                            <Image x:ConnectionId='4' Width="150" Height="150"                              />
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
 

@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Popups;
+using System.Diagnostics;
 
 namespace PhotoLibraryApp
 {
     public class Picture
     {
         // File to store application's data
-        private const string TEXT_FILE_NAME = "Library.txt";
+        private const string TEXT_FILE_NAME = "PictureLibrary.txt";
 
         // Global collection of pictures
         public static ObservableCollection<Picture> Collection = new ObservableCollection<Picture>();
+
+        public static StorageFile mainStorageFile;
 
         // Path of the picture file
         public string Path { get; set; }
@@ -33,19 +36,19 @@ namespace PhotoLibraryApp
         {
             foreach (var storageFile in storageFiles)
             {
-
+                mainStorageFile = storageFile;
                 if (Collection.Any(p => p.Path == storageFile.Path) == false)
                 {
+
+
                     // Add picture to the global collection
                     await AddPictureToCollection(storageFile.Path);
-
 
                     // Save picture file path in storage data file
                     FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, storageFile.Path);
                 }
                 else
                 {
-                    // show mwssage to the user
                     var dialog = new MessageDialog($"The file '{storageFile.Path}' already exists in the collection.");
                     await dialog.ShowAsync();
                 }
@@ -67,7 +70,6 @@ namespace PhotoLibraryApp
                 foreach (var file in fileList)
                 {
                    await AddPictureToCollection(file);
-
                 }
             }
         }
@@ -98,5 +100,31 @@ namespace PhotoLibraryApp
             // Add Picture object to the global observable collection
             Collection.Add(pic);
         }
+
+        //Delete Photos Method: 
+
+
+        public static async Task DeletePhotoFromCollection(string photoPath)
+        {
+            string currFile = ApplicationData.Current.LocalFolder.Path + "\\" + TEXT_FILE_NAME;
+            string tempFile =  currFile + ".temp";
+            Debug.WriteLine(currFile);
+            Debug.WriteLine(tempFile);
+            using (var sr = new StreamReader(currFile))
+            using (var sw = new StreamWriter(tempFile))
+            {
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line != photoPath)
+                        sw.WriteLine(line);
+                }
+            }
+
+            File.Delete(currFile);
+            File.Move(tempFile, currFile);
+        }
+
     }
 }

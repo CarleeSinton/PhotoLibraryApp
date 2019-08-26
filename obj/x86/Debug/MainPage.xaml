@@ -9,19 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
-        <StackPanel Orientation="Vertical" Margin="20,20">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Collection" Background="White" />
-                <Button x:ConnectionId='5' Content="Albums" Background="White"                           />
-                <Button x:ConnectionId='6' Content="+ Add Photos"                                      Margin="400,0" />
-            </StackPanel>
 
+        <StackPanel Orientation="Vertical" Margin="100, 30, 110, 20">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0"/>
+                <Button x:ConnectionId='5' Content="Albums" Background="White"                            BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
+                <StackPanel Orientation="Vertical"  Margin="200,20">
+                    <Button x:ConnectionId='6' Content="   + Add Photos  "                                      BorderBrush="Gray" Background="White"/>
+                    <Button x:ConnectionId='7' Content="- Delete Photos"                                         BorderBrush="Gray" Background="White"/>
+                 </StackPanel>
+            </StackPanel>
             <GridView x:ConnectionId='2' Name="CollectionGrid" ItemsSource="{Binding}"
-                ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <GridView.ItemTemplate>
                     <DataTemplate                           >
-                        <Image x:ConnectionId='4' Width="150" Height="150"                               />
+                        <Image x:ConnectionId='4' Width="150" Height="150"                              />
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>

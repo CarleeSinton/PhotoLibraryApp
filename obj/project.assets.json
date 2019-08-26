@@ -8150,25 +8150,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saphi\\.nuget\\packages\\": {},
+    "C:\\Users\\Carleen\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saphi\\source\\repos\\PhotoLibraryApp\\PhotoLibraryApp.csproj",
+      "projectUniqueName": "C:\\Users\\Carleen\\Desktop\\PhotoLibraryAppDESKTOPCLONEAUGUST20\\PhotoLibraryApp.csproj",
       "projectName": "PhotoLibraryApp",
-      "projectPath": "C:\\Users\\saphi\\source\\repos\\PhotoLibraryApp\\PhotoLibraryApp.csproj",
-      "packagesPath": "C:\\Users\\saphi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saphi\\source\\repos\\PhotoLibraryApp\\obj\\",
+      "projectPath": "C:\\Users\\Carleen\\Desktop\\PhotoLibraryAppDESKTOPCLONEAUGUST20\\PhotoLibraryApp.csproj",
+      "packagesPath": "C:\\Users\\Carleen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Carleen\\Desktop\\PhotoLibraryAppDESKTOPCLONEAUGUST20\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\saphi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Carleen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"

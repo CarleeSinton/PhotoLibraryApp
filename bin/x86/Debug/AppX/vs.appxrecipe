@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>INDUX220</Machine>
-    <WindowsUser>saphi</WindowsUser>
+    <Machine>DESKTOP-DN39OL8</Machine>
+    <WindowsUser>Carleen</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>dccf9700-49ae-4bcd-9029-6d376cff31c9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Carleen</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\saphi\source\repos\PhotoLibraryApp\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>49200AC068CE7200CBCEB32BFFCD5F31E99758671364C9FC8B53E63191EF6C5A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>dccf9700-49ae-4bcd-9029-6d376cff31c9_1.0.0.0_x86__ekwfph1e0f7dm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>dccf9700-49ae-4bcd-9029-6d376cff31c9_ekwfph1e0f7dm!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-20T15:51:59.086</Modified>
+      <Modified>2019-08-21T21:50:33.995</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\PhotoLibraryApp.exe">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\PhotoLibraryApp.exe">
       <PackagePath>entrypoint\PhotoLibraryApp.exe</PackagePath>
-      <Modified>2019-08-20T15:51:57.790</Modified>
+      <Modified>2019-08-21T21:50:33.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.8\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,71 +46,71 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-19T01:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-08-15T07:42:21.449</Modified>
+      <Modified>2019-08-20T20:00:28.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-08-15T07:42:21.428</Modified>
+      <Modified>2019-08-20T20:00:28.289</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-15T07:42:21.429</Modified>
+      <Modified>2019-08-20T20:00:28.289</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-15T07:42:21.431</Modified>
+      <Modified>2019-08-20T20:00:28.290</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-15T07:42:21.432</Modified>
+      <Modified>2019-08-20T20:00:28.290</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-15T07:42:21.433</Modified>
+      <Modified>2019-08-20T20:00:28.291</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-15T07:42:21.434</Modified>
+      <Modified>2019-08-20T20:00:28.291</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-15T07:42:21.435</Modified>
+      <Modified>2019-08-20T20:00:28.292</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\PhotoLibraryApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\PhotoLibraryApp.xr.xml">
       <PackagePath>PhotoLibraryApp.xr.xml</PackagePath>
-      <Modified>2019-08-19T22:44:58.055</Modified>
+      <Modified>2019-08-21T21:44:37.421</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-08-20T15:51:57.420</Modified>
+      <Modified>2019-08-21T21:50:33.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\AlbumPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\AlbumPage.xbf">
       <PackagePath>AlbumPage.xbf</PackagePath>
-      <Modified>2019-08-20T15:51:57.420</Modified>
+      <Modified>2019-08-21T21:50:33.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-08-20T15:51:57.421</Modified>
+      <Modified>2019-08-21T21:50:33.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-19T00:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-08-19T22:55:35.701</Modified>
+      <Modified>2019-08-21T21:47:42.020</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saphi\source\repos\PhotoLibraryApp\bin\x86\Debug\Core\PhotoLibraryApp.exe">
+    <AppxPackagedFile Include="C:\Users\Carleen\Desktop\PhotoLibraryAppDESKTOPCLONEAUGUST20\bin\x86\Debug\Core\PhotoLibraryApp.exe">
       <PackagePath>PhotoLibraryApp.exe</PackagePath>
-      <Modified>2019-08-20T15:51:59.048</Modified>
+      <Modified>2019-08-21T21:50:33.975</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

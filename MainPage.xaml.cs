@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Input;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -62,11 +63,27 @@ namespace PhotoLibraryApp
             this.Frame.Navigate(typeof(AlbumPage));
         }
 
-        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        private void Delete_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DeletePhoto));
+        }
+
+        private void SelectPhotosButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SelectPhotos));
+        }
+
+
+        private void CancelSelectionBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void CollectionGrid_ItemClick(object sender, ItemClickEventArgs e)
         {
             GridView gv = sender as GridView;
-            int index = gv.Items.IndexOf((e.ClickedItem));
-            this.Frame.Navigate(typeof(PhotoViewPage), index );
+            int index = gv.Items.IndexOf(e.ClickedItem);
+            this.Frame.Navigate(typeof(PhotoViewPage), index);
         }
     }
 }

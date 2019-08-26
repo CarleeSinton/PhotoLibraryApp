@@ -5,24 +5,35 @@
     xmlns:local="using:PhotoLibraryApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="100, 30, 110, 20">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Collection" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" Click="Collection_Button_Click"/>
-                <Button Content="Albums" Background="White" BorderBrush="Gray" BorderThickness="1, 1, 1, 0" RenderTransformOrigin="0.701,2.031"/>
-                <Button Content="+ Album" Click="Add_Album_Button_ClickAsync" Margin="300, 20" BorderBrush="Gray" Background="White"/>
+        <Page>
+            <CommandBar DefaultLabelPosition="Right">
+                <AppBarButton x:Name="SelectPhotosButton" FontFamily="OverflowCheckGlyph" Label="Select Photos">
+                    <AppBarButton.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe762;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Name="AddItemBtn" Label="Create Album" Icon="Add" Click="Add_Album_Button_ClickAsync"/>
+                <AppBarButton x:Name="DeleteItemBtn" Label="Delete Album" Icon="Delete"/>
+                <AppBarButton x:Name="CancelSelectionBtn" Label="Cancel" Icon="Cancel" Click="CancelSelectionBtn_Click_1"/>
+            </CommandBar>
+        </Page>
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" Margin="100, 50, 110, 20">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Collection" Background="White" FontSize="20" Click="Collection_Button_Click"/>
+                    <Button Content="Albums" Background="White" FontSize="20" BorderBrush="Gray" BorderThickness="0, 0, 0, 1"/>
+                </StackPanel>
+                <StackPanel x:Name="stack1"
+                        Orientation="Horizontal">
+                </StackPanel>
             </StackPanel>
-            <GridView Name="CollectionGrid" ItemsSource="{Binding}"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto">
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="local:Picture">
-                        <Image Width="150" Height="150" Source="{x:Bind ImageSource}"/>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </StackPanel>
+        </ScrollViewer>
+
     </Grid>
+
 </Page>

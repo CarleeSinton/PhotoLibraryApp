@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace PhotoLibraryApp
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(textFile.Path, true))
             {
                 file.WriteLine(content);
-            }            
+            }
         }
 
         public async static Task<string> ReadTextFileAsync(string filename)
@@ -43,5 +44,6 @@ namespace PhotoLibraryApp
             await textReader.LoadAsync((uint)textLength);
             return textReader.ReadString((uint)textLength);
         }
+
     }
 }
