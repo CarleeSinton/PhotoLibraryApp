@@ -7,8 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-
     <Grid>
         <CommandBar DefaultLabelPosition="Right">
                 <CommandBar.Content>
@@ -30,6 +28,5 @@
                 </FlipView.ItemTemplate>
             </FlipView>           
         </StackPanel>
-
     </Grid>
 </Page>

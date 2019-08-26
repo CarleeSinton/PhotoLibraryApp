@@ -32,7 +32,7 @@ namespace PhotoLibraryApp
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
+            base.OnNavigatedTo(e);                      
         }
 
         public async void Add_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)
@@ -84,7 +84,6 @@ namespace PhotoLibraryApp
             GridView gv = sender as GridView;
             int index = gv.Items.IndexOf(e.ClickedItem);
             this.Frame.Navigate(typeof(PhotoViewPage), index);
-
         }
     }
 }

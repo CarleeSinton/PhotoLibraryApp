@@ -9,7 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
         <Page>
             <CommandBar DefaultLabelPosition="Right">
                 <AppBarButton x:Name="SelectPhotosButton" FontFamily="OverflowCheckGlyph" Label="Select Photos">

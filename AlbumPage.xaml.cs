@@ -32,7 +32,7 @@ namespace PhotoLibraryApp
             this.InitializeComponent();
         }
 
-        private async Task LoadPicturesFromAlbums()
+    private async Task LoadPicturesFromAlbums()
         {
             //Ordering album files by date
             // initialize queryOptions using a common query

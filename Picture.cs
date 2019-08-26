@@ -69,9 +69,7 @@ namespace PhotoLibraryApp
 
                 foreach (var file in fileList)
                 {
-
-                    await AddPictureToCollection(file);
-
+                   await AddPictureToCollection(file);
                 }
             }
         }

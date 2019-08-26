@@ -37,8 +37,5 @@
                 </GridView>
             </StackPanel>
         </ScrollViewer>
-        
-
-
     </Grid>
 </Page>

@@ -23,7 +23,6 @@ namespace PhotoLibraryApp
     /// </summary>
     public sealed partial class PhotoViewPage : Page
     {
-
         public PhotoViewPage()
         {
             this.InitializeComponent();
@@ -40,13 +39,10 @@ namespace PhotoLibraryApp
         // Items for the flip view
         public ObservableCollection<Picture> Items { get; set; } // = Picture.Collection;
 
-       
-
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
-
         private void Add_Photos_Button_ClickAsync(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
